@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aj.expensetracker.controller.DataVisualizationController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+             <HBox alignment="CENTER" prefHeight="35.0" style="-fx-background-color: teal;">
+                 <children>
+                     <Label alignment="CENTER" contentDisplay="TOP" prefHeight="38.0" prefWidth="611.0" text="Expense Tracker" textAlignment="CENTER" textFill="#f0a30a">
+                         <font>
+                             <Font name="Calibri" size="27.0" />
+                         </font>
+                     </Label>
+                 </children>
+             </HBox>
+            <BarChart fx:id="expenseChart" title="Monthly Expenses">
+              <xAxis>
+                <CategoryAxis label="Month" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Expenses" />
+              </yAxis>
+            </BarChart>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="returnButton" mnemonicParsing="false" onAction="#handleReturn" text="Return" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
